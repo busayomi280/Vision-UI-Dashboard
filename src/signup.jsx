@@ -38,7 +38,7 @@ function Signup() {
 
       // Update user profile with name
       await updateProfile(userCredential.user, {
-        displayName: formData.name
+        displayName: formData.name,
       });
 
       // Redirect to dashboard
