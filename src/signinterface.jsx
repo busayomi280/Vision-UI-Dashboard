@@ -39,7 +39,7 @@ function Signinterface() {
         <div className="imageside"></div>
         <div className="formside"></div>
          <div className="footer1">
-          <div className="year">@2025 Vision-UI</div>
+          <div className="year">@2026 Vision-UI</div>
           <ul className="lists">
             <li className="footer-list">Marketplace</li>
             <li className="footer-list">Blog</li>
