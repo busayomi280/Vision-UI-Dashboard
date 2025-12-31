@@ -46,19 +46,42 @@ import "./dashboard.css";
 function Dashboard() {
   const [user] = useAuthState(auth);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [showLogout, setShowLogout] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      navigate("/login");
+    } catch (error) {
+      console.error("Error logging out:", error);
+    }
+  };
 
   return (
     <div className="dash">
-      {/* Hamburger Menu for Mobile */}
+      {/* Hamburger Menu */}
       <div 
         className="hamburger-menu" 
-        onClick={() => setSidebarOpen(!sidebarOpen)}
+        onClick={() => setShowLogout(!showLogout)}
       >
         <FaBars />
       </div>
+
+      {showLogout && (
+        <div className="logout-dropdown">
+          <div className="user-info">
+            <FaUser />
+            <span>{user?.displayName || user?.email}</span>
+          </div>
+          <button onClick={handleLogout} className="logout-btn">
+            <FaSignOutAlt /> Logout
+          </button>
+        </div>
+      )}
       
       <div className="dashboard-container">
-        <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
+        <div className="sidebar">
           <Sidebar />
         </div>
         <div className="main">
