@@ -55,6 +55,32 @@
 .second-menu h4 {
   padding-left: 30px;
 }
+.need-help-section {
+  background: url(/need-help.png);
+  margin: 35px;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: start;
+  color: white;
+}
+.need-help-section span{
+    background-color: #fff;
+    padding: 3px 7px;
+    font-size: 1.2em;
+    color: #0066e6;
+    border-radius: 5px;
+}
+.need-help-section h4, p{
+    font-size: .9em;
+}
+.need-help-section button{
+    background-color: #0a1b3fb2;
+    border: none;
+    font-weight: 200;
+    font-size: .7em;
+    padding: 7px 30px;
+    border-radius: 7px;
+}
 .main {
   grid-area: main;
   padding: 20px;
@@ -65,9 +91,8 @@
   display: flex;
 }
 .main-dashboard .pages-dash .left {
-  position: absolute;
-  left: 270px;
-  top: 10px;
+  position: relative;
+  left: 20px;
 }
 .left {
   font-size: 0.7em;
@@ -76,8 +101,8 @@
   color: #969696;
 }
 .right {
-  position: absolute;
-  right: 20px;
+  position: relative;
+  left: 610px;
   display: flex;
   align-items: center;
   gap: 1em;
@@ -99,7 +124,7 @@
 .four-cards {
   display: flex;
   justify-content: space-between;
-  padding-top: 40px;
+  padding-top: 10px;
 }
 .four-cards .cards {
   background-color: #0a1b3f;
@@ -273,10 +298,16 @@
     background-color: #0a1b3f;
     border-radius: 20px;
     padding: 15px 0;
-    
+}
+.chart-wrapper{
+    background-color: #061027;
+    width: 95%;
+    margin: auto;
+    border-radius: 20px;
+    padding-top: 10px;
 }
 .active-users-card .header{
-   padding: 15px;
+   padding: 10px 20px;
 }
 .active-users-card .header p{
     font-size: .7em;
@@ -286,8 +317,8 @@
 }
 .stats{
     display: flex;
-    gap: 2em;
-    padding: 0 15px;
+    gap: 2.3em;
+    padding: 0 20px;
 }
 .stat-item div{
     display: flex;
@@ -324,6 +355,239 @@
 .progress span {
   display: block;
   height: 100%;
+  background: #0066e6;
+  border-radius: 4px;
+}
+.projects-card {
+  background: #0b1c3f;
+  padding: 20px;
+  border-radius: 16px;
+  color: white;
+}
+
+.projects-card table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.projects-card th {
+  text-align: left;
+  font-size: 12px;
+  color: #93c5fd;
+  padding-bottom: 10px;
+}
+
+.projects-card td {
+  padding: 12px 0;
+  font-size: 14px;
+}
+
+.members img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid #0b1c3f;
+  margin-left: -8px;
+}
+
+.progress {
+  height: 4px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+.progress span {
+  display: block;
+  height: 100%;
   background: linear-gradient(90deg, #38bdf8, #ffffff);
   border-radius: 4px;
+}
+.projects-card {
+  background: linear-gradient(127deg, rgba(6, 11, 40, 0.94) 0%, rgba(10, 14, 35, 0.49) 100%);
+  border-radius: 15px;
+  padding: 18px;
+  margin-top: 20px;
+  width: 60%;
+  /* height: 400px; */
+}
+
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.projects-header h4 {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.projects-header p {
+  color: #A0AEC0;
+  font-size: 14px;
+}
+
+.check-icon {
+  color: #01B574;
+  margin-right: 5px;
+}
+
+.projects-table-header {
+  color: #A0AEC0;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-row:last-child {
+  border-bottom: none;
+}
+
+.project-company {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.company-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.project-company span {
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.project-details {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex: 2;
+  justify-content: flex-end;
+}
+
+.project-members {
+  display: flex;
+  align-items: center;
+}
+
+.member-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #0b1437;
+  margin-left: -8px;
+}
+
+.member-avatar:first-child {
+  margin-left: 0;
+}
+
+.project-budget {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 100px;
+  text-align: center;
+}
+
+.project-completion {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 120px;
+}
+
+.completion-text {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: red;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+.company-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.company-logo-wrapper {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-logo {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0) invert(1); 
+}
+.project-overview{
+  display: flex;
+  gap: 16px;
+  padding-left: 20px;
+}
+.overview{
+  background-color: #0F123B;
+  margin-top: 20px;
+  width: 40%;
+  border-radius: 20px;
+  padding: 16px;
+}
+.overview .order{
+  padding-top: 10px ;
+  display: flex;
+  gap: 10px;
+}
+.order-name{
+  font-weight: 600;
+}
+.order-date{
+  font-size: .7em;
 }
