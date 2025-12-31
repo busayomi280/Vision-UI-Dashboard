@@ -21,7 +21,7 @@
 .imageside {
   width: 50vw;
   min-height: 100vh;
-  background-image: url("./vision-ui-signup.png");
+  background-image: url("/vision-ui-signup.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
