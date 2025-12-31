@@ -501,7 +501,9 @@ ul li a:hover {
   .formside {
     padding: 60px 15px 30px 15px;
   }
-  
+  .hamburger-menu{
+    display: block;
+  }
   nav {
     width: 95%;
     margin-top: 10px;

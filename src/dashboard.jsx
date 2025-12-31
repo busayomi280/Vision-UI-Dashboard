@@ -22,7 +22,8 @@ import {
   FaUser,
   FaWallet,
   FaWrench,
-  FaBars
+  FaBars,
+  FaSignOutAlt
 } from "react-icons/fa";
 import {
   AreaChart,
