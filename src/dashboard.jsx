@@ -389,14 +389,23 @@ export function MainDashboard() {
           <span className="search-icon">
             <FaSearch />
           </span>
-          <p onClick={handleLogout}>
+          <p onClick={handleLogout} className="logout-p">
             {" "}
             <FaUser /> Logout{" "}
           </p>
-          <FaCog />
-          <FaBell />
+          <span className="pages-icon paon"><FaCog /></span>
+          <span className="pages-icon"><FaBell /></span>
         </div>
       </div>
+       <div className="welcome-card in-pages-dash">
+          <p>Welcome back</p>
+          <p className="name">{user?.displayName}</p>
+          <p>Glad to see you again!</p>
+          <p>Ask me anything</p>
+          <p className="record">
+            Tap to record <FaArrowRight />
+          </p>
+        </div>
       <div className="four-cards">
         {card.map((item) => (
           <div key={item.name} className="cards">
@@ -410,7 +419,7 @@ export function MainDashboard() {
         ))}
       </div>
       <div className="big-cards">
-        <div className="welcome-card">
+        <div className="welcome-card in-big-cards">
           <p>Welcome back</p>
           <p className="name">{user?.displayName}</p>
           <p>Glad to see you again!</p>

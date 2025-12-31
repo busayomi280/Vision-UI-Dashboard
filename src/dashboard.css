@@ -157,7 +157,7 @@
   padding: 20px;
   padding-left: 0;
 }
-.big-cards .welcome-card {
+ .welcome-card {
   background: url(/big-card-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
@@ -595,7 +595,12 @@
 }
 .footer .year{
   font-weight: 600;
-}/* Add these responsive styles to your dashboard.css */
+}
+
+.in-pages-dash{
+  display: none;
+}
+/* Add these responsive styles to your dashboard.css */
 
 /* Base styles remain the same, adding responsive breakpoints */
 
@@ -842,7 +847,7 @@
   
   .satisfaction-card,
   .refferal {
-    height: auto;
+    height: fit-content;
     padding: 15px 10px;
   }
   
@@ -851,7 +856,6 @@
   }
   
   .percent-div {
-    position: static;
     margin-top: 10px;
     width: 100%;
   }
@@ -860,11 +864,6 @@
     flex-direction: column;
     gap: 15px;
   }
-  
-  .reff-img-side .ssa {
-    position: static;
-  }
-  
   .charts {
     gap: 10px;
   }
@@ -891,18 +890,65 @@
   .right {
     gap: 0.3em;
     font-size: 0.8em;
+    align-items: center;
   }
   
   .right input {
-    width: 80px;
+    width: 270px;
     padding: 4px 10px;
   }
   
   .right .search-icon {
-    left: 70px;
+    top: 9px;
+    left: 13px;
     font-size: 0.7em;
   }
-  
+  .right .paon{
+    padding-left: 50px;
+  }
+  .in-pages-dash{
+    display: block;
+    width: 365px;
+    margin-top: 16px ;
+  }
+  .in-big-cards{
+    display: none;
+  }
+  .pages-icon{
+    padding-right: 8px;
+    font-size: 1.3em;
+  }
+   .reff{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  .satisfaction-card .img{
+    width: 20px;
+    margin-left: 20px;
+  }
+  .img span{
+    top: 120px;
+    right: 190px;
+  }
+  .percent-div{
+    width: 90%;   
+    left: 20px;
+    top: 210px;
+  }
+  .reff .reff-img-side img{
+    width: 180px;
+    margin-left: 20px;
+  }
+  .big-cards img{
+    width: 70%;
+  }
+  .reff-img-side .ssa{
+    top: 70px;
+    right: 150px;
+  }
+  .year{
+    text-align: center;
+  }
   .four-cards .cards {
     flex-direction: column;
     align-items: flex-start;
@@ -1099,6 +1145,9 @@
     padding: 12px;
     margin-top: 16px;
   }
+  .pages-dash .right{
+    display: block;
+  }
 
   .projects-header h4 {
     font-size: 14px;
@@ -1147,10 +1196,10 @@
   display: none;
   position: fixed;
   top: 20px;
-  left: 20px;
+  right: 20px;
   z-index: 1001;
   background: #0066e6;
-  padding: 10px;
+  padding: 8px 12px;
   border-radius: 8px;
   cursor: pointer;
   color: white;
@@ -1162,6 +1211,6 @@
   }
   
   .main {
-    padding-top: 60px;
+    padding-top: 20px;
   }
 }
