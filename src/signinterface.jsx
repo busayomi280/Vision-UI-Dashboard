@@ -38,7 +38,7 @@ function Signinterface() {
         </nav>
         <div className="imageside"></div>
         <div className="formside"></div>
-         <div className="footer">
+         <div className="footer1">
           <div className="year">@2025 Vision-UI</div>
           <ul className="lists">
             <li className="footer-list">Marketplace</li>

@@ -83,8 +83,7 @@
 }
 .main {
   grid-area: main;
-  padding: 20px;
-  height: 100vh;
+  padding: 20px ;
   overflow-y: auto;
 }
 .main .main-dashboard .pages-dash {
@@ -92,7 +91,6 @@
 }
 .main-dashboard .pages-dash .left {
   position: relative;
-  left: 20px;
 }
 .left {
   font-size: 0.7em;
@@ -132,7 +130,6 @@
   justify-content: space-between;
   width: 250px;
   align-items: center;
-  margin-left: 20px;
   border-radius: 19px;
   padding: 10px;
 }
@@ -158,6 +155,7 @@
   display: flex;
   gap: 1.5em;
   padding: 20px;
+  padding-left: 0;
 }
 .big-cards .welcome-card {
   background: url(/big-card-bg.png);
@@ -270,7 +268,6 @@
   right: 37px;
 }
 .charts{
-    padding-left: 20px;
     display: flex;
     gap: 1em;
 }
@@ -571,7 +568,6 @@
 .project-overview{
   display: flex;
   gap: 16px;
-  padding-left: 20px;
 }
 .overview{
   background-color: #0F123B;
@@ -594,9 +590,578 @@
 .footer{
   display: flex;
   justify-content: space-between;
-  /* padding: 20px; */
+  padding: 20px;
   padding-bottom: 0;
 }
 .footer .year{
   font-weight: 600;
+}/* Add these responsive styles to your dashboard.css */
+
+/* Base styles remain the same, adding responsive breakpoints */
+
+/* Large Desktop - 1440px and above (default styles apply) */
+
+/* Desktop - 1024px to 1440px */
+@media (max-width: 1440px) {
+  .right {
+    left: 400px;
+  }
+  
+  .four-cards .cards {
+    width: 220px;
+  }
+  
+  .big-cards .welcome-card {
+    width: 350px;
+  }
+  
+  .satisfaction-card,
+  .refferal {
+    width: 240px;
+  }
+  
+  .refferal {
+    width: 290px;
+  }
+}
+
+/* Tablet Landscape - 1024px */
+@media (max-width: 1024px) {
+  .dashboard-container {
+    grid-template-columns: 200px 1fr;
+  }
+  
+  .sidebar .logo img {
+    width: 80%;
+  }
+  
+  .right {
+    left: 200px;
+    gap: 0.7em;
+  }
+  
+  .right input {
+    width: 150px;
+  }
+  
+  .right .search-icon {
+    right: 230px;
+  }
+  
+  .four-cards {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .four-cards .cards {
+    width: 48%;
+    margin-left: 0;
+  }
+  
+  .big-cards {
+    flex-wrap: wrap;
+    gap: 1em;
+  }
+  
+  .big-cards .welcome-card {
+    width: 100%;
+  }
+  
+  .satisfaction-card {
+    width: 48%;
+  }
+  
+  .refferal {
+    width: 48%;
+  }
+  
+  .charts {
+    flex-direction: column;
+  }
+  
+  .chart1,
+  .chart2 {
+    width: 100%;
+  }
+  
+  .project-overview {
+    flex-direction: column;
+  }
+  
+  .projects-card {
+    width: 100% !important;
+  }
+  
+  .overview {
+    width: 100% !important;
+  }
+}
+
+/* Tablet Portrait - 768px */
+@media (max-width: 768px) {
+  .dashboard-container {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "main";
+  }
+  
+  .sidebar {
+    display: none;
+  }
+  .sidebar.open {
+    left: 0;
+  }
+  
+  .main {
+    padding: 15px;
+  }
+  
+  .pages-dash {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .pages-dash .left {
+    left: 0;
+  }
+  
+  .right {
+    left: 0;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .right input {
+    width: 120px;
+  }
+  
+  .right .search-icon {
+    right: auto;
+    left: 110px;
+  }
+  
+  .four-cards {
+    flex-direction: column;
+    padding-top: 15px;
+  }
+  
+  .four-cards .cards {
+    width: 100%;
+    margin-left: 0;
+  }
+  
+  .big-cards {
+    flex-direction: column;
+    padding: 15px 0;
+  }
+  
+  .big-cards .welcome-card {
+    width: 100%;
+  }
+  
+  .satisfaction-card,
+  .refferal {
+    width: 100%;
+  }
+  
+  .charts {
+    padding-left: 0;
+    gap: 15px;
+  }
+  
+  .project-overview {
+    padding-left: 0;
+  }
+  
+  .stats {
+    flex-wrap: wrap;
+    gap: 1.5em;
+  }
+  
+  .stat-item {
+    width: 45%;
+  }
+  
+  .footer {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .footer .lists {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+}
+
+/* Mobile Landscape - 640px */
+@media (max-width: 640px) {
+  .main {
+    padding: 10px;
+  }
+  
+  .pages-dash .left h3 {
+    font-size: 1.2em;
+  }
+  
+  .right {
+    font-size: 0.9em;
+    gap: 0.5em;
+  }
+  
+  .right input {
+    width: 100px;
+    font-size: 0.8em;
+  }
+  
+  .right p {
+    display: none;
+  }
+  
+  .four-cards .cards {
+    padding: 15px 10px;
+  }
+  
+  .cards .card-left .name {
+    font-size: 0.65em;
+  }
+  
+  .card-left .amount {
+    font-size: 0.9em;
+  }
+  
+  .big-cards {
+    padding: 10px 0;
+  }
+  
+  .big-cards .welcome-card {
+    height: 180px;
+    padding: 15px 10px;
+  }
+  
+  .satisfaction-card,
+  .refferal {
+    height: auto;
+    padding: 15px 10px;
+  }
+  
+  .img span {
+    right: 110px;
+  }
+  
+  .percent-div {
+    position: static;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .reff {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .reff-img-side .ssa {
+    position: static;
+  }
+  
+  .charts {
+    gap: 10px;
+  }
+  
+  .chart-text h2 {
+    font-size: 1em;
+  }
+  
+  .stats {
+    gap: 1em;
+  }
+  
+  .stat-item {
+    width: 100%;
+  }
+}
+
+/* Mobile Portrait - 480px */
+@media (max-width: 480px) {
+  .pages-dash .left {
+    font-size: 0.65em;
+  }
+  
+  .right {
+    gap: 0.3em;
+    font-size: 0.8em;
+  }
+  
+  .right input {
+    width: 80px;
+    padding: 4px 10px;
+  }
+  
+  .right .search-icon {
+    left: 70px;
+    font-size: 0.7em;
+  }
+  
+  .four-cards .cards {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .cards .icon {
+    align-self: flex-end;
+  }
+  
+  .big-cards .welcome-card {
+    font-size: 0.9em;
+  }
+  
+  .satisfaction-card h4,
+  .refferal .top h4 {
+    font-size: 0.9em;
+  }
+  
+  .satisfaction-card .img,
+  .reff-img-side {
+    width: 100%;
+    padding: 10px 20px;
+  }
+  
+  .projects-card {
+    padding: 12px;
+    overflow-x: auto;
+  }
+  
+  .projects-card table {
+    min-width: 500px;
+  }
+  
+  .projects-card th,
+  .projects-card td {
+    font-size: 12px;
+    padding: 10px 5px;
+  }
+  
+  .members img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .overview {
+    padding: 12px;
+  }
+  
+  .order {
+    gap: 8px;
+  }
+  
+  .order-name {
+    font-size: 0.85em;
+  }
+  
+  .order-date {
+    font-size: 0.65em;
+  }
+  
+  .footer .lists {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Extra Small Mobile - 360px */
+@media (max-width: 360px) {
+  .main {
+    padding: 8px;
+  }
+  .members, .td-mem{
+    display: none;
+  }
+  .right input {
+    width: 60px;
+  }
+  
+  .right .search-icon {
+    left: 50px;
+  }
+  
+  .four-cards .cards {
+    padding: 12px 8px;
+  }
+  
+  .big-cards {
+    gap: 10px;
+  }
+  
+  .big-cards .welcome-card {
+    height: 160px;
+    font-size: 0.85em;
+  }
+  
+  .record {
+    padding-top: 50px;
+  }
+  
+  .projects-card {
+    padding: 10px;
+  }
+  
+  .projects-card h4 {
+    font-size: 14px;
+  }
+  
+  .overview h4 {
+    font-size: 14px;
+  }
+}
+
+/* Projects Card Responsive Styles */
+@media (max-width: 1024px) {
+  .project-details {
+    gap: 24px;
+  }
+
+  .project-budget {
+    min-width: 80px;
+    font-size: 13px;
+  }
+
+  .project-completion {
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-card {
+    padding: 16px;
+    width: 100%;
+  }
+
+  .projects-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .projects-header h4 {
+    font-size: 16px;
+  }
+
+  .projects-header p {
+    font-size: 12px;
+  }
+
+  .project-row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 0;
+    gap: 12px;
+  }
+
+  .project-company {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .project-details {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding-left: 52px;
+  }
+
+  .project-members {
+    order: 1;
+  }
+
+  .project-budget {
+    order: 2;
+    min-width: unset;
+    text-align: left;
+  }
+
+  .project-completion {
+    order: 3;
+    width: 100%;
+    min-width: unset;
+  }
+
+  .member-avatar {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-card {
+    padding: 12px;
+    margin-top: 16px;
+  }
+
+  .projects-header h4 {
+    font-size: 14px;
+  }
+
+  .company-logo-wrapper {
+    width: 36px;
+    height: 36px;
+  }
+
+  .company-logo-svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .project-company span {
+    font-size: 13px;
+  }
+
+  .project-details {
+    padding-left: 48px;
+    gap: 12px;
+  }
+
+  .project-budget {
+    font-size: 12px;
+  }
+
+  .completion-text {
+    font-size: 12px;
+  }
+
+  .member-avatar {
+    width: 24px;
+    height: 24px;
+    margin-left: -6px;
+  }
+
+  .projects-table-header {
+    font-size: 11px;
+  }
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger-menu {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1001;
+  background: #0066e6;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+  }
+  
+  .main {
+    padding-top: 60px;
+  }
 }

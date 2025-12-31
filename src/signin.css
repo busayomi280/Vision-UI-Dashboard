@@ -211,14 +211,14 @@ ul li a:hover {
   font-size: 14px;
 }
 
-.footer{
+.footer1{
   position: absolute;
   bottom: 10px;
   right: 260px;
   padding-bottom: 0;
   font-size: .8em;
 }
-.footer .year{
+.footer1 .year{
   font-weight: 300;
   padding-right: 50px;
 }

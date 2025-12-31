@@ -22,6 +22,7 @@ import {
   FaUser,
   FaWallet,
   FaWrench,
+  FaBars
 } from "react-icons/fa";
 import {
   AreaChart,
@@ -44,11 +45,20 @@ import "./dashboard.css";
 
 function Dashboard() {
   const [user] = useAuthState(auth);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <div className="dash">
+      {/* Hamburger Menu for Mobile */}
+      <div 
+        className="hamburger-menu" 
+        onClick={() => setSidebarOpen(!sidebarOpen)}
+      >
+        <FaBars />
+      </div>
+      
       <div className="dashboard-container">
-        <div className="sidebar">
+        <div className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
           <Sidebar />
         </div>
         <div className="main">
@@ -476,7 +486,7 @@ export function MainDashboard() {
           <thead>
             <tr>
               <th>Company</th>
-              <th>Members</th>
+              <th className="td-mem">Members</th>
               <th>Budget</th>
               <th>Completion</th>
             </tr>
