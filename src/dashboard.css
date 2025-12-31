@@ -591,3 +591,12 @@
 .order-date{
   font-size: .7em;
 }
+.footer{
+  display: flex;
+  justify-content: space-between;
+  /* padding: 20px; */
+  padding-bottom: 0;
+}
+.footer .year{
+  font-weight: 600;
+}

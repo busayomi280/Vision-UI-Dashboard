@@ -4,7 +4,9 @@ import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { auth } from './firebase';
 import Signinterface from "./signinterface";
 import { Link } from "react-router-dom";
-import { FaApple, FaFacebook, FaGoogle } from "react-icons/fa";
+import { Footer } from './dashboard';
+import { FaApple, FaFacebook, FaGoogle } from 
+"react-icons/fa";
 import './signin.css';
 
 function Signup() {
@@ -127,6 +129,9 @@ function Signup() {
           </p>
         </div>
       </div>
+        <div className="footer-div">
+          <Footer/>
+        </div>
     </div>
   );
 }

@@ -5,6 +5,7 @@ import { auth } from './firebase';
 import Signinterface from "./signinterface";
 import { Link } from "react-router-dom";
 import "./signin.css";
+import { Footer } from './dashboard';
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -102,6 +103,7 @@ function Login() {
             <Link to="/signup">Sign up</Link>
           </p>
         </div>
+        <Footer/>
       </div>
     </div>
   );

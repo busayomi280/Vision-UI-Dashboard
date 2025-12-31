@@ -34,7 +34,7 @@ import {
   Bar,
   BarChart,
 } from "recharts";
-import { useNavigate, NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
@@ -44,16 +44,6 @@ import "./dashboard.css";
 
 function Dashboard() {
   const [user] = useAuthState(auth);
-  const navigate = useNavigate();
-
-  const handleLogout = async () => {
-    try {
-      await signOut(auth);
-      navigate("/login");
-    } catch (error) {
-      console.error("Error logging out:", error);
-    }
-  };
 
   return (
     <div className="dash">
@@ -65,8 +55,6 @@ function Dashboard() {
           <MainDashboard />
         </div>
       </div>
-      {/* <button onClick={handleLogout}>Logout</button>
-       <SalesOverviewChart /> */}
     </div>
   );
 }
@@ -367,7 +355,16 @@ export function MainDashboard() {
       date: '18 DEC 4:41PM'
     },
   ];
+  const navigate = useNavigate();
 
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      navigate("/login");
+    } catch (error) {
+      console.error("Error logging out:", error);
+    }
+  };
   return (
     <div className="main-dashboard">
       <div className="pages-dash">
@@ -382,9 +379,9 @@ export function MainDashboard() {
           <span className="search-icon">
             <FaSearch />
           </span>
-          <p>
+          <p onClick={handleLogout}>
             {" "}
-            <FaUser /> Sign In{" "}
+            <FaUser /> Logout{" "}
           </p>
           <FaCog />
           <FaBell />
