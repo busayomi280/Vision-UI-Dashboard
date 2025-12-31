@@ -5,7 +5,6 @@ import { auth } from './firebase';
 import Signinterface from "./signinterface";
 import { Link } from "react-router-dom";
 import "./signin.css";
-import { Footer } from './dashboard';
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -52,6 +51,8 @@ function Login() {
           break;
         default:
           setError('Failed to sign in. Please try again.');
+          console.log(err);
+          
       }
     } finally {
       setLoading(false);
@@ -103,7 +104,6 @@ function Login() {
             <Link to="/signup">Sign up</Link>
           </p>
         </div>
-        <Footer/>
       </div>
     </div>
   );
